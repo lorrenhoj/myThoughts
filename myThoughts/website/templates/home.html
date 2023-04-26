@@ -2,13 +2,25 @@
 
 {% block content %}
 
+{% if user.is_authenticated %}
+
+
+
+<h1>mainpage</h1>
+
+
+
+
+
+{% else %}
+
 <section class="py-5 text-center" style="background-color: #FFcba5;">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 m-auto">
         <p class="fw-bold fs-1" style="color: #fff;">Create your own Blog</p>
         <p class="fw-light fs-2" style="color: #fff;">Your own thoughts will be your uniqueness to the world.</p>
         <p>
-          <a href="#" class="btn btn-outline-light my-2">Our Community</a>
+          <a href="#community" class="btn btn-outline-light my-2">Our Community</a>
           <a href="#" class="btn btn-outline-light my-2">Register</a>
         </p>
       </div>
@@ -26,17 +38,18 @@
         <div class="col-lg-4 p-5">
             {% load static %}<img src="{% static "website/media/oog.jpg" %}" alt="home" class="rounded-circle image-fluid" width="200px" height="150px"  />
             <h2 class="fw-normal">Oogway</h2>
-            <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
+            <p>There are no accidents.</p>
             <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4 p-5">
             {% load static %}<img src="{% static "website/media/lmac.jpg" %}" alt="home" class="rounded-circle image-fluid" width="200px" height="150px" />
             <h2 class="fw-normal">KACHOW!</h2>
-            <p>And lastly this, the third column of representative placeholder content.</p>
+            <P>Hello there *bling*bling*bling*</P>
             <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         </div><!-- /.row -->
     </div>
+  {% endif %}
     
 
 {% endblock %}
